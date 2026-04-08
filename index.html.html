@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedDrop - Premium Accessories</title>
+    <!-- Importing a sporty font -->
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --accent-color: #00ff88; /* Sporty Neon Green */
+            --text-color: #ffffff;
+            --secondary-text: #b3b3b3;
+            --border-color: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-color);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Teko', sans-serif;
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: var(--accent-color);
+        }
+
+        p.subtitle {
+            color: var(--secondary-text);
+            font-size: 1.2rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Product Section Styling */
+        .product-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Sporty accent line on sections */
+        .product-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--accent-color);
+        }
+
+        .section-title {
+            font-family: 'Teko', sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Grid Layout for Products */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Product Card */
+        .product-card {
+            background: #252525;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #000;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            object-position: center;
+        }
+
+        .product-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* Form Elements */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            background-color: #121212;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        select:focus {
+            border-color: var(--accent-color);
+        }
+
+        /* Buttons */
+        .btn-continue {
+            background-color: var(--accent-color);
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            transition: background 0.3s;
+            font-family: 'Teko', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .btn-continue:hover {
+            background-color: #00cc6a;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--secondary-text);
+            border-top: 1px solid #333;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .product-section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Speed<span>Drop</span></h1>
+        <p class="subtitle">Premium Gear. Fast Delivery. Sporty Style.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- PHONE CASES SECTION -->
+        <section class="product-section" id="cases-section">
+            <h2 class="section-title">Phone Cases</h2>
+            <div class="product-grid">
+                <!-- Case 1: Sport Series -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1603313011101-320f26a4f6f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sport Case" class="product-image">
+                    <div class="product-name">Sport Series Case</div>
+                    <label>Select Brand</label>
+                    <select id="case-brand-1">
+                        <option value="iPhone">iPhone</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Xiaomi">Xiaomi</option>
+                        <option value="OnePlus">OnePlus</option>
+                    </select>
+                    <label>Select Design</label>
+                    <select id="case-design-1">
+                        <option value="Matte Black">Matte Black</option>
+                        <option value="Neon Blue">Neon Blue</option>
+                        <option value="Carbon Fiber">Carbon Fiber</option>
+                        <option value="Transparent">Transparent</option>
+                    </select>
+                    <button class="btn-continue" onclick="sendToWhatsapp('Phone Case', 'Sport Series', 'case-brand-1', 'case-design-1')">Continue</button>
+                </div>
+
+                <!-- Case 2: Rugged Defender (Same Image as Sport Series) -->
+                <div class="product-card">
+                    <!-- Updated to use the same image as Sport Series -->
+                    <img src="https://images.unsplash.com/photo-1603313011101-320f26a4f6f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Rugged Defender" class="product-image">
+                    <div class="product-name">Rugged Defender</div>
+                    <label>Select Brand</label>
+                    <select id="case-brand-2">
+                        <option value="iPhone">iPhone</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Xiaomi">Xiaomi</option>
+                    </select>
+                    <label>Select Design</label>
+                    <select id="case-design-2">
+                        <option value="Red Stripe">Red Stripe</option>
+                        <option value="Green Camo">Green Camo</option>
+                        <option value="Blackout">Blackout</option>
+                    </select>
+                    <button class="btn-continue" onclick="sendToWhatsapp('Phone Case', 'Rugged Defender', 'case-brand-2', 'case-design-2')">Continue</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- EARPODS SECTION -->
+        <section class="product-section" id="earpods-section">
+            <h2 class="section-title">EarPods & Earphones</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="EarPods" class="product-image">
+                    <div class="product-name">Pro Wireless Pods</div>
+                    <label>Select Brand</label>
+                    <select id="earpod-brand">
+                        <option value="Generic">Generic</option>
+                        <option value="Apple Style">Apple Style</option>
+                        <option value="Samsung Style">Samsung Style</option>
+                    </select>
+                    <label>Select Color</label>
+                    <select id="earpod-color">
+                        <option value="Black">Black</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Dark Green">Dark Green</option>
+                        <option value="White">White</option>
+                    </select>
+                    <button class="btn-continue" onclick="sendToWhatsapp('EarPods', 'Pro Wireless Pods', 'earpod-brand', 'earpod-color')">Continue</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHARGER SECTION -->
+        <section class="product-section" id="charger-section">
+            <h2 class="section-title">Chargers</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="25W Charger" class="product-image">
+                    <div class="product-name">25W Fast Adapter</div>
+                    <p style="color:var(--secondary-text); margin-bottom:15px;">High speed charging for all devices.</p>
+                    <label>Select Color</label>
+                    <select id="charger-color">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                    </select>
+                    <button class="btn-continue" onclick="sendToWhatsapp('Charger', '25W Fast Adapter', 'charger-color', null)">Continue</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CABLES SECTION (Images Removed) -->
+        <section class="product-section" id="cables-section">
+            <h2 class="section-title">Cables</h2>
+            <div class="product-grid">
+                <!-- Type C (No Image) -->
+                <div class="product-card">
+                    <!-- Image tag removed as requested -->
+                    <div class="product-name">Type-C Cable</div>
+                    <label>Select Color</label>
+                    <select id="cable-typec-color">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                    </select>
+                    <button class="btn-continue" onclick="sendToWhatsapp('Cable', 'Type-C', 'cable-typec-color', null)">Continue</button>
+                </div>
+
+                <!-- Micro USB (No Image) -->
+                <div class="product-card">
+                    <!-- Image tag removed as requested -->
+                    <div class="product-name">Micro USB Cable</div>
+                    <label>Select Color</label>
+                    <select id="cable-micro-color">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                    </select>
+                    <button class="btn-continue" onclick="sendToWhatsapp('Cable', 'Micro USB', 'cable-micro-color', null)">Continue</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2023 SpeedDrop Accessories. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function sendToWhatsapp(productType, productName, brandSelectId, colorSelectId) {
+            // 1. Get the phone number (UPDATED)
+            const phoneNumber = "9550420819";
+
+            // 2. Get the selected values
+            let brand = "";
+            let color = "";
+
+            if (brandSelectId) {
+                brand = document.getElementById(brandSelectId).value;
+            }
+            if (colorSelectId) {
+                color = document.getElementById(colorSelectId).value;
+            }
+
+            // 3. Construct the message
+            let message = `Hi, I am interested in buying:\n\n`;
+            message += `*Product:* ${productName}\n`;
+            message += `*Category:* ${productType}\n`;
+            
+            if (brand) {
+                message += `*Brand/Model:* ${brand}\n`;
+            }
+            if (color) {
+                message += `*Color:* ${color}\n`;
+            }
+
+            message += `\nPlease let me know the price and availability.`;
+
+            // 4. Encode the message for URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // 5. Create the WhatsApp URL
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            // 6. Open WhatsApp
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
